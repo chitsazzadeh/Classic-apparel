@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login/Registration</title>
+    <link rel="stylesheet" href="login page.css"> <!-- Link to your CSS file -->
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Brand Logo" class="logo-img">
+            <h1>Classic Apparels</h1> <!-- Replace with your brand name -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home page-1.html">Home</a></li>
+                <li><a href="checkout page.html">Checkout</a></li>
+                <li><a href="product page.html">Product</a></li> 
+                <li><a href="About us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section for Login and Registration -->
+    <main>
+        <div class="form-container">
+            <!-- Toggle for Login and Registration Forms -->
+            <div class="form-toggle">
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="form-content">
+                <h2>Login</h2>
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="login-email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="login-password" required>
+
+                <button type="submit" class="form-btn">Login</button>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="register-form" class="form-content hidden">
+                <h2>Register</h2>
+                <label for="register-name">Full Name</label>
+                <input type="text" id="register-name" name="register-name" required>
+
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" name="register-email" required>
+
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" name="register-password" required>
+
+                <label for="register-password-confirm">Confirm Password</label>
+                <input type="password" id="register-password-confirm" name="register-password-confirm" required>
+
+                <button type="submit" class="form-btn">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Classic Apparel. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggling Between Forms -->
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const registerBtn = document.getElementById('register-btn');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        });
+
+        registerBtn.addEventListener('click', () => {
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+    </script>
+
+</body>
+</html>
